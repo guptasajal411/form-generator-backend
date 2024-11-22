@@ -4,6 +4,7 @@ export interface IField {
     id: string;
     type: "email" | "text" | "password" | "number" | "date";
     title: string;
+    placeholder: string;
     order: number;
 }
 
@@ -16,6 +17,7 @@ const FieldSchema = new Schema<IField>({
     id: { type: String, required: true },
     type: { type: String, required: true },
     title: { type: String, required: true },
+    placeholder: { type: String, required: true },
     order: { type: Number, required: true },
 });
 
